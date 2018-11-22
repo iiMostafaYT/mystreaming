@@ -10,6 +10,7 @@ client.on('message', message => {
     
 if (message.content.startsWith(adminprefix + 'setgame')) {
   client.user.setGame(argresult);
+  message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
 } else 
   if (message.content.startsWith(adminprefix + 'setname')) {
 client.user.setUsername(argresult).then
@@ -17,9 +18,11 @@ client.user.setUsername(argresult).then
 } else
   if (message.content.startsWith(adminprefix + 'setavatar')) {
 client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
       } else     
 if (message.content.startsWith(adminprefix + 'sett')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk");//حقوق دايموند كودزحقوق دايموند كودز
+  client.user.setGame(argresult, "https://www.twitch.tv/idk");//
+ message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
 }
 });
 
